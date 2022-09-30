@@ -1,0 +1,26 @@
+footer {
+  position: relative;
+  bottom: 0;
+  width:100%;
+}
+
+.footer-options {
+  display: flex;
+  justify-content: center;
+  background-color: rgba($color: #ffffff, $alpha: 0.8);
+  border-radius: 5px;
+  font-weight: 100;
+  a {
+    text-decoration: none;
+  }
+  p {
+    margin: 0;
+  }
+  .footer-options-leaf {
+    padding: 0 1%;
+  }
+}
+
+.footer-spacing {
+  height: 2rem;
+}

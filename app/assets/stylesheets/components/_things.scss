@@ -1,0 +1,15 @@
+.marker {
+  width: 6px;
+  height: 6px;
+  background-color: #003f68;
+  border-radius: 20%;
+  align-self: center;
+}
+
+.rotate {
+  animation: rotation 8s infinite linear;
+  margin: 0;
+  font-style: none;
+  font-family: $body-font;
+  align-self: center;
+}

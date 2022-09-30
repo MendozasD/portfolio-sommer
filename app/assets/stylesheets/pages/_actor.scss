@@ -1,0 +1,11 @@
+.edit-card-regie-actor {
+  border: dotted $rosa 5px;
+  width: 350px;
+  margin: 0 auto;
+  padding: 10px;
+  .leaf {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+  }
+}

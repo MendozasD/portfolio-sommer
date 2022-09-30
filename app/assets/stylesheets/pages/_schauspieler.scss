@@ -1,0 +1,50 @@
+.container-schauspieler {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  .side-pic {
+    position: sticky;
+    margin-top: 60px;
+    top: 20px;
+    width: 45%;
+    height: 90%;
+    box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.1);
+    .pic-push-down {
+      height: 40px;
+      width: 100%;
+    }
+    .actor-pic {
+      width: 100%;
+      margin: 0 auto;
+      height: 100%;
+    }
+  }
+  .actor-list {
+    width: 45%;
+  }
+}
+
+.list-title {
+  font-family: $body-font;
+  font-size: 1.2rem;
+  font-weight: 100;
+  letter-spacing: -1px;
+  width: 100%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .container-schauspieler {
+    flex-direction: column;
+    width: 90%;
+    .side-pic, .actor-list {
+      margin: 0 auto;
+      width: 100%;
+    }
+    .side-pic {
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+  }
+}

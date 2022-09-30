@@ -1,0 +1,65 @@
+.kommende {
+  margin: 2% auto;
+  text-align: -webkit-center;
+  .tag-kommende {
+    font-family: $body-font;
+    font-size: 1.2rem;
+    font-weight: 100;
+    letter-spacing: -1px;
+    width: fit-content;
+  }
+  .info-kommende {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    .card-kommende {
+      padding: 0.5rem;
+      .kommende-link-info:hover {
+        transition: all ease 500ms;
+        box-shadow: inset 0em -0.5em $rosa;
+      }
+      .piece-title, .kommende-location {
+        margin: 0;
+      }
+      .kommende-location {
+        white-space: nowrap;
+        font-size: 0.8rem;
+      }
+      .piece-title {
+        text-align: center;
+        font-size: 1.8rem;
+        font-style: italic;
+        @keyframes rotation {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(359deg);
+          }
+        }
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .kommende {
+    flex-direction: column;
+    .tag-kommende {
+      align-self: center;
+      margin: 3%;
+    }
+    .info-kommende {
+      width: 100%;
+    }
+    .kommende-line {
+      width: 80%;
+    }
+  }
+}

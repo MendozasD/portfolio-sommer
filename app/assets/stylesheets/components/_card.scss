@@ -1,0 +1,64 @@
+.card {
+  margin: 5% 0;
+  border-radius: 6px;
+  color: #112A46;
+  .piece-title {
+    margin: 0;
+    letter-spacing: -1px;
+    padding: 4% 0 1% 0;
+    p {
+      font-size: 0.8rem;
+      margin: 0;
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+      width: 100%;
+      font-size: 1.6rem;
+      margin: 0;
+      text-decoration: underline 2px $rosa;
+    }
+  }
+
+  li {
+    margin: 1rem;
+  }
+
+  li::marker {
+    content: '■';
+    color: gold;
+  }
+
+  #card-info {
+    padding-bottom: 4%;
+    .card-line {
+      display: flex;
+      gap: 10px;
+      .tag {
+        width: 50%;
+        white-space: nowrap;
+        font-weight: 100;
+        text-align: right;
+      }
+      .tag-info {
+        width: 50%;
+        text-align: left;
+      }
+      p {
+        margin:0;
+        font-size: 0.9rem;
+      }
+    }
+    .card-line-fit {
+      display: grid;
+      gap: 2px;
+      .tag, .tag-comment {
+        width: 100%;
+        text-align: center;
+      }
+      span {
+        text-align: center;
+      }
+    }
+  }
+}

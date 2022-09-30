@@ -1,4 +1,4 @@
-.container-home {
+.container-kontakt {
   display: grid;
   gap: 0.5rem;
   grid-template-columns: 1fr 2fr 1fr;
@@ -6,18 +6,19 @@
   height: 90%;
   margin: 0 auto;
   .description {
-    display: flex;
-    align-items: flex-end;
-    p {
+    text-align: right;
+    margin: 0;
+    font-size: 0.8rem;
+  }
+  .info-kontakt {
       margin: 0;
       font-size: 0.8rem;
-      text-align: right;
-    }
+      align-self: end;
   }
   .main-foto {
     transition: all 800ms ease;
-    box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.1);
-    .lp-pic {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    .kontakt-pic {
       border-radius: 5px;
       width: 100%;
       margin: 0 auto;
@@ -26,7 +27,7 @@
 }
 
 @media (max-width: 800px) {
-  .container-home {
+  .container-kontakt {
     display: flex;
     flex-direction: column;
     width: 85%;
