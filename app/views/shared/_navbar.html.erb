@@ -1,0 +1,11 @@
+<div class="nav-bar">
+
+  <h1><%= link_to 'Rolf Sommer', root_path, class: "rolf-sommer" %></h1>
+
+  <div class="main-menu">
+    <h2><%= link_to "SCHAUSPIELER", schauspieler_path, class: current_class?(schauspieler_path)%></h2>
+    <h2><%= link_to "REGISSEUR", regisseur_path, class: current_class?(regisseur_path)%></h2>
+    <h2><%= link_to "TEXTER", texter_path, class: current_class?(texter_path)%></h2>
+  </div>
+
+</div>

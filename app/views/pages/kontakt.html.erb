@@ -1,0 +1,21 @@
+<div class="container-kontakt">
+  <div class="description">
+    <%= mail_to 'info@rolfsommer.net', nil, target: '_blank' %>
+    <br>
+    <%= link_to 'Facebook', 'https://www.facebook.com/rolf.sommer.94', target: "_blank" %>
+    <br>
+    <%= link_to 'Instagram', 'https://www.instagram.com/rolf_sommer_/', target: "_blank" %>
+  </div>
+  <div class="main-foto">
+    <%= image_tag("pic6_scream.jpg", class: "kontakt-pic") %>
+  </div>
+  <div class="info-kontakt">
+    <a>Fotograf</a>
+    <br>
+    <%= link_to 'Jon Trachsel', 'https://jontrachsel.ch', target: "_blank" %>
+    <br><br><br>
+    <a>Web Designer & Developer</a>
+    <br>
+    <%= mail_to 'dmendozasommmer@gmail.com', 'David Mendoza', target: '_blank' %>
+  </div>
+</div>

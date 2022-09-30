@@ -1,0 +1,33 @@
+<p class="list-title">Vergangene Produktionen</p>
+
+<% @texter.each do |a| %>
+  <% if a.premiere %>
+    <div class="card">
+
+      <div class="piece-title">
+        <h2>«<%= a.piece %>»</h2>
+        <p class="tag"><%= a.year %></p>
+      </div>
+      <div id="card-info">
+        <% unless a.genre.blank? %>
+          <div class="card-line card-line-fit">
+            <p class="tag">Genre:</p>
+            <p class="tag-comment"><%= a.genre %></p>
+          </div>
+        <% end %>
+        <% unless a.responsible.blank? %>
+          <div class="card-line card-line-fit">
+            <p class="tag">Verantwortlich für:</p>
+            <p class="tag-comment"><%= a.responsible %></p>
+          </div>
+        <% end %>
+        <% unless a.comment.blank? %>
+          <div class="card-line card-line-fit">
+            <p class="tag">Kommentare:</p>
+            <span class="tag-comment"><%= simple_format (a.comment) %></span>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+<% end %>

@@ -1,0 +1,29 @@
+<div class="kommende">
+  <span class="tag-kommende">Nächste Produktionen:</span>
+  <div class="info-kommende">
+
+    <% @actor.each do |s|  %>
+      <% unless s.premiered %>
+        <div class="card-kommende">
+
+          <h4 class="piece-title">
+
+            <%# Star wrapping piece title %>
+            <%= image_tag("star_sign.png", class: "rotate", height: "20px") %>
+
+            <%# This fills the piece's name with the URL for info %>
+            <% if s.url.blank? %>
+              <%= s.piece %>
+            <% else %>
+              <%= link_to s.piece, s.url, html_options = {target: "_blank", class: 'kommende-link-info'} %>
+            <% end %>
+
+            <%= image_tag("star_sign.png", class: "rotate", height: "20px") %>
+          </h4>
+          <p class="kommende-location"><%= s.location %>, <%= s.start.to_formatted_s(:short)  %> - <%= s.end.to_formatted_s(:short) %>, <%= s.year %></p>
+
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

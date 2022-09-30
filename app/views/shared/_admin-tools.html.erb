@@ -1,0 +1,11 @@
+<div class="container">
+  <section class="kommende-card">
+    <h4>Hoi Schatz, <%= current_user.email %></h4>
+    <p>You can add, update or delete any of the entries via the following links</p>
+    <%= link_to 'Actors list', actors_path %>
+    <%= link_to 'Directors list', regies_path %>
+    <%= link_to 'Texter list', texters_path %>
+    <br>
+    <%= link_to "Log out", destroy_user_session_path, method: 'delete' %>
+  </section>
+</div>

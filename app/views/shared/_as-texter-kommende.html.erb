@@ -1,0 +1,25 @@
+<div class="kommende">
+  <span class="tag-kommende">Nächste Produktionen:</span>
+  <div class="line-info-wrapper">
+    <div class="info-kommende">
+
+      <% @texter.each do |s|  %>
+        <% unless s.premiere %>
+          <div class="card-kommende">
+            <h4 class="piece-title">
+
+              <%= image_tag("star_sign.png", class: "rotate", height: "20px") %>
+
+              <%= s.piece %>
+
+              <%= image_tag("star_sign.png", class: "rotate", height: "20px") %>
+            </h4>
+            <p class="kommende-location"><%= s.comment %></p>
+          </div>
+        <% end %>
+      <% end %>
+
+    </div>
+    <div class="kommende-line"></div>
+  </div>
+</div>

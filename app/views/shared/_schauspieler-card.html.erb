@@ -1,0 +1,52 @@
+<p class="list-title">Vergangene Produktionen</p>
+
+<% @actor.each do |a| %>
+  <% if a.premiered %>
+    <div class="card">
+      <div class="piece-title">
+        <h2>«<%= a.piece %>»</h2>
+        <p class="tag"><%= a.year %></p>
+      </div>
+
+      <div id="card-info">
+        <div class="card-line">
+          <p class="tag">Rolle:</p>
+          <p class="tag-info"><%= a.role %></p>
+        </div>
+
+        <div class="card-line">
+          <p class="tag">Spielort: </p>
+          <p class="tag-info"><%= a.location %></p>
+        </div>
+
+        <% unless a.regie.blank? %>
+          <div class="card-line">
+            <p class="tag">Regie:</p>
+            <p class="tag-info"><%= a.regie %></p>
+          </div>
+        <% end %>
+
+        <% unless a.musiker.blank? %>
+          <div class="card-line">
+            <p class="tag">Musikalische Leitung: </p>
+            <p class="tag-info"> <%= a.musiker %></p>
+          </div>
+        <% end %>
+
+        <% unless a.choreo.blank? %>
+          <div class="card-line">
+            <p class="tag">Choreografie:</p>
+            <p class="tag-info"><%= a.choreo %></p>
+        </div>
+        <% end %>
+
+        <% unless a.url.blank? %>
+          <div class="card-line">
+            <p class="tag">URL</p>
+            <a class="tag-info"> <%= a.url %></a>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+<% end %>
