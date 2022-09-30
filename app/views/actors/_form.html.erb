@@ -7,8 +7,8 @@
     <%= f.input :piece %>
     <%= f.input :role %>
     <%= f.input :location %>
-    <%= f.input :start_date %>
-    <%= f.input :end_date %>
+    <%= f.input :start_date, start_year: 2000, end_year: 2030 %>
+    <%= f.input :end_date, start_year: 2000, end_year: 2030  %>
     <%= f.input :director %>
     <%= f.input :musiker %>
     <%= f.input :choreo %>
