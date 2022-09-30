@@ -1,10 +1,12 @@
-<h1>Editing writer</h1>
+<div class="db-container">
+  <h1>Editing writer</h1>
 
-<%= render "form", writer: @writer %>
+  <%= render "form", writer: @writer %>
 
-<br>
+  <br>
 
-<div>
-  <%= link_to "Show this writer", @writer %> |
-  <%= link_to "Back to writers", writers_path %>
+  <div>
+    <%= link_to "Show this writer", @writer %> |
+    <%= link_to "Back to writers", writers_path %>
+  </div>
 </div>

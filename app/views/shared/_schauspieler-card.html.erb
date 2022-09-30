@@ -1,25 +1,30 @@
 <p class="list-title">Vergangene Produktionen</p>
 
 <% @actor.each do |a| %>
-  <% if a.premiered %>
+  <% if a.premiere %>
     <div class="card">
       <div class="piece-title">
         <h2>«<%= a.piece %>»</h2>
-        <p class="tag"><%= a.year %></p>
+        <p class="tag"><%= a.start_date.strftime('%Y') %></p>
       </div>
 
       <div id="card-info">
-        <div class="card-line">
-          <p class="tag">Rolle:</p>
-          <p class="tag-info"><%= a.role %></p>
-        </div>
 
-        <div class="card-line">
-          <p class="tag">Spielort: </p>
-          <p class="tag-info"><%= a.location %></p>
-        </div>
+        <% unless a.role.blank? %>
+          <div class="card-line">
+            <p class="tag">Rolle:</p>
+            <p class="tag-info"><%= a.role %></p>
+          </div>
+        <% end %>
 
-        <% unless a.regie.blank? %>
+        <% unless a.location.blank? %>
+          <div class="card-line">
+            <p class="tag">Spielort: </p>
+            <p class="tag-info"><%= a.location %></p>
+          </div>
+        <% end %>
+
+        <% unless a.director.blank? %>
           <div class="card-line">
             <p class="tag">Regie:</p>
             <p class="tag-info"><%= a.regie %></p>

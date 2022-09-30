@@ -1,10 +1,12 @@
-<p style="color: green"><%= notice %></p>
+<div class="db-container">
+  <p style="color: green"><%= notice %></p>
 
-<%= render @actor %>
+  <%= render @actor %>
 
-<div>
-  <%= link_to "Edit this actor", edit_actor_path(@actor) %> |
-  <%= link_to "Back to actors", actors_path %>
+  <div>
+    <%= link_to "Edit this actor", edit_actor_path(@actor) %> |
+    <%= link_to "Back to actors", actors_path %>
 
-  <%= button_to "Destroy this actor", @actor, method: :delete %>
+    <%= button_to "Destroy this actor", @actor, method: :delete %>
+  </div>
 </div>

@@ -1,14 +1,16 @@
-<p style="color: green"><%= notice %></p>
+<div class="db-container">
+  <p style="color: green"><%= notice %></p>
 
-<h1>Directors</h1>
+  <h1>Directors</h1>
 
-<div id="directors">
-  <% @directors.each do |director| %>
-    <%= render director %>
-    <p>
-      <%= link_to "Show this director", director %>
-    </p>
-  <% end %>
+  <div id="directors">
+    <% @directors.each do |director| %>
+      <%= render director %>
+      <p>
+        <%= link_to "Show this director", director %>
+      </p>
+    <% end %>
+  </div>
+
+  <%= link_to "New director", new_director_path %>
 </div>
-
-<%= link_to "New director", new_director_path %>

@@ -1,14 +1,16 @@
-<p style="color: green"><%= notice %></p>
+<div class="db-container">
+  <p style="color: green"><%= notice %></p>
 
-<h1>Writers</h1>
+  <h1>Writers</h1>
 
-<div id="writers">
-  <% @writers.each do |writer| %>
-    <%= render writer %>
-    <p>
-      <%= link_to "Show this writer", writer %>
-    </p>
-  <% end %>
+  <div id="writers">
+    <% @writers.each do |writer| %>
+      <%= render writer %>
+      <p>
+        <%= link_to "Show this writer", writer %>
+      </p>
+    <% end %>
+  </div>
+
+  <%= link_to "New writer", new_writer_path %>
 </div>
-
-<%= link_to "New writer", new_writer_path %>
