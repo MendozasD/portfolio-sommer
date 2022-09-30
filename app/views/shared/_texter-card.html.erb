@@ -1,12 +1,12 @@
 <p class="list-title">Vergangene Produktionen</p>
 
-<% @texter.each do |a| %>
+<% @writer.each do |a| %>
   <% if a.premiere %>
     <div class="card">
 
       <div class="piece-title">
         <h2>«<%= a.piece %>»</h2>
-        <p class="tag"><%= a.year %></p>
+        <p class="tag"></p>
       </div>
       <div id="card-info">
         <% unless a.genre.blank? %>

@@ -2,8 +2,8 @@
   <span class="tag-kommende">Nächste Produktionen:</span>
   <div class="info-kommende">
 
-    <% @regie.each do |s|  %>
-      <% unless s.premiered %>
+    <% @director.each do |s|  %>
+      <% unless s.premiere %>
         <div class="card-kommende">
 
           <h4 class="piece-title">
@@ -20,7 +20,7 @@
 
             <%= image_tag("star_sign.png", class: "rotate", height: "20px") %>
           </h4>
-          <p class="kommende-location"><%= s.location %>, <%= s.date_start.to_formatted_s(:short)  %> - <%= s.date_end.to_formatted_s(:short) %>, <%= s.year %></p>
+          <p class="kommende-location"><%= s.location %>, <%= s.start_date.to_formatted_s(:short)  %> - <%= s.end_date.to_formatted_s(:short) %></p>
         </div>
       <% end %>
     <% end %>
