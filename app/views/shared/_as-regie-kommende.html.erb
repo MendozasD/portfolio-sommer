@@ -20,7 +20,7 @@
 
             <%= image_tag("star_sign.png", class: "rotate", height: "20px") %>
           </h4>
-          <p class="kommende-location"><%= s.location %>, <%= s.start_date.to_formatted_s(:short)  %> - <%= s.end_date.to_formatted_s(:short) %></p>
+          <p class="kommende-location"><%= s.location %>, <%= s.start_date.to_formatted_s(:short)  %> - <%= s.end_date.to_formatted_s(:short) %>, <%= s.start_date.strftime('%Y') %></p>
         </div>
       <% end %>
     <% end %>
