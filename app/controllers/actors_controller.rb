@@ -1,5 +1,6 @@
 class ActorsController < ApplicationController
   before_action :set_actor, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /actors or /actors.json
   def index

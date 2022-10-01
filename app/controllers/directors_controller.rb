@@ -1,5 +1,6 @@
 class DirectorsController < ApplicationController
   before_action :set_director, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /directors or /directors.json
   def index

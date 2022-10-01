@@ -56,6 +56,9 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
+  #Change this before pushing to Heroku (with the Heroku url)
+  config.action_mailer.default_url_options = { host: 'rolfsommer.herokuapp.com' }
+
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
 

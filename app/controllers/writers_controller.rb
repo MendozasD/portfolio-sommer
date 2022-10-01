@@ -1,5 +1,6 @@
 class WritersController < ApplicationController
   before_action :set_writer, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /writers or /writers.json
   def index
