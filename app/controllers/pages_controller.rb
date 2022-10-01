@@ -3,15 +3,15 @@ class PagesController < ApplicationController
   end
 
   def schauspieler
-    @actor = Actor.all
+    @actor = Actor.all.order(start_date: :desc)
   end
 
   def regisseur
-    @director = Director.all
+    @director = Director.all.order(start_date: :desc)
   end
 
   def texter
-    @writer = Writer.all
+    @writer = Writer.all.order(year: :desc)
   end
 
   def media
