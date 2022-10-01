@@ -3,14 +3,17 @@
 
   <h1>Directors</h1>
 
+  <button><%= link_to "New director", new_director_path %></button>
+
   <div id="directors">
     <% @directors.each do |director| %>
-      <%= render director %>
-      <p>
-        <%= link_to "Show this director", director %>
-      </p>
+      <div class="card">
+        <%= render director %>
+        <p>
+          <button><%= link_to "Show this director", director %></button>
+        </p>
+      </div>
     <% end %>
   </div>
 
-  <%= link_to "New director", new_director_path %>
 </div>

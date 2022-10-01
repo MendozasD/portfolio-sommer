@@ -3,14 +3,15 @@
 
   <h1>Writers</h1>
 
+  <button><%= link_to "New writer", new_writer_path %></button>
+
   <div id="writers">
     <% @writers.each do |writer| %>
       <%= render writer %>
       <p>
-        <%= link_to "Show this writer", writer %>
+        <button><%= link_to "Show this writer", writer %></button>
       </p>
     <% end %>
   </div>
 
-  <%= link_to "New writer", new_writer_path %>
 </div>

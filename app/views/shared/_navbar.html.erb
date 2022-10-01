@@ -1,3 +1,15 @@
+<div class="db-container">
+  <% if user_signed_in? %>
+    <h2>Hola, mi amor!</h2>
+    <p>Please choose one of the options bellow to edit, add or delete an entry</p>
+    <button><%= link_to 'Actor menu', actors_path %></button>
+    <button><%= link_to 'Director menu', directors_path %></button>
+    <button><%= link_to 'Writer menu', writers_path %></button>
+    <br>
+    <button><%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete} %></button>
+  <% end %>
+</div>
+
 <div class="nav-bar">
 
   <h1><%= link_to 'Rolf Sommer', root_path, class: "rolf-sommer" %></h1>

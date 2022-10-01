@@ -3,14 +3,16 @@
 
   <h1>Actors</h1>
 
+  <button><%= link_to "New actor", new_actor_path %></button>
+
   <div id="actors">
     <% @actors.each do |actor| %>
-      <%= render actor %>
-      <p>
-        <%= link_to "Show this actor", actor %>
-      </p>
+      <div class="card">
+        <%= render actor %>
+        <p>
+          <button><%= link_to "Show this actor", actor %></button>
+        </p>
+      </div>
     <% end %>
   </div>
-
-  <%= link_to "New actor", new_actor_path %>
 </div>
