@@ -10,7 +10,11 @@
 
               <%= image_tag("star_sign.png", class: "rotate", height: "20px") %>
 
-              <%= s.piece %>
+              <% if s.url.blank? %>
+                <%= s.piece %>
+              <% else %>
+                <%= link_to s.piece, s.url, html_options = {target: "_blank", class: 'kommende-link-info'} %>
+              <% end %>
 
               <%= image_tag("star_sign.png", class: "rotate", height: "20px") %>
             </h4>

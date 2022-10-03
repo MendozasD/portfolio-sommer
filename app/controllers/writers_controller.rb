@@ -66,6 +66,6 @@ class WritersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def writer_params
-      params.require(:writer).permit(:piece, :genre, :year, :responsible, :comment, :premiere)
+      params.require(:writer).permit(:piece, :genre, :year, :responsible, :comment, :premiere, :url)
     end
 end
