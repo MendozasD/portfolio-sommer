@@ -145,9 +145,18 @@ GEM
       racc (~> 1.4)
     nokogiri (1.13.8-arm64-darwin)
       racc (~> 1.4)
+<<<<<<< HEAD
     nokogiri (1.13.8-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+=======
+
+    orm_adapter (0.5.0)
+
+    nokogiri (1.13.8-x86_64-linux)
+      racc (~> 1.4)
+
+>>>>>>> d3865111dbd48c3a0825b9c80c1ddd7ec6187890
     pg (1.4.3)
     public_suffix (5.0.0)
     puma (5.6.5)
